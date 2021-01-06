@@ -19,13 +19,15 @@ public class UserManager {
      * @param password 
      * @return  
      */
+    
     public User loginUser(String email, String password){
         
-        UserDAO userDAO = new UserDAO();
+       UserDAO userDAO = new UserDAO();
         User user = userDAO.getUserByEmail(email);
         if (user.getPassword().equals(password)){
             return user;
         }
         else return null;
     }
+    
 }

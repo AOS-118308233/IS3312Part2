@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package com.shop.utils;
 
 import com.shop.utils.DBManager;
 import java.io.File;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author BEmerson
+ * @author aoife
  */
 public class SetUpDB {
 
@@ -31,7 +31,7 @@ public class SetUpDB {
 
         Connection con = dmbgr.getConnection();
 
-        InputStream inpStr = this.getClass().getResourceAsStream("createdb.sql");
+        InputStream inpStr = this.getClass().getResourceAsStream("createDB.sql");
 
         executeSqlScript(con, inpStr);
     }
@@ -42,7 +42,7 @@ public class SetUpDB {
 
         Connection con = dmbgr.getConnection();
         
-        InputStream inpStr = this.getClass().getResourceAsStream("insertdata.sql");
+        InputStream inpStr = this.getClass().getResourceAsStream("insertData.sql");
 
         executeSqlScript(con, inpStr);
     }
@@ -65,10 +65,10 @@ public class SetUpDB {
                 int id = results.getInt(1);
                 String email = results.getString(2);
                 String password = results.getString(3);
-                String fName = results.getString(4);
-                String lName = results.getString(5);
+                String firstName = results.getString(4);
+                String lastName = results.getString(5);
                 String userType = results.getString(6);
-                logger.info(id + "\t\t" + email + "\t\t" + password + "\t\t" + fName + "\t\t" + lName + "\t\t" + userType);
+                logger.info(id + "\t\t" + email + "\t\t" + password + "\t\t" + firstName + "\t\t" + lastName + "\t\t" + userType);
             }
             results.close();
             stmt.close();
@@ -78,16 +78,21 @@ public class SetUpDB {
 
         try {
             stmt = con.createStatement();
-            ResultSet results = stmt.executeQuery("select * from INSTRUMENTS");
+            ResultSet results = stmt.executeQuery("select * from PRODUCTS");
 
             System.out.println("\n-------------------------------------------------");
 
             while (results.next()) {
-                int id = results.getInt(1);
-                String userName = results.getString(2);
-                String fName = results.getString(1);
-                String lName = results.getString(6);
-                logger.info(id + "\t\t" + userName + "\t\t" + fName + "\t\t" + lName);
+                String productCode = results.getString(1);
+                String productName = results.getString(2);
+                String productDescription = results.getString(3);
+                String brandName = results.getString(4);
+                float price = results.getFloat(5);
+                String colour = results.getString(6);
+                String animalType = results.getString(7);
+                String productImage = results.getString(8);
+               
+                logger.info(productCode + "\t\t" + productName + "\t\t" + productDescription + "\t\t" + brandName + "\t\t" + price + "\t\t" + colour + "\t\t" + animalType + "\t\t" + productImage);
             }
             results.close();
             stmt.close();
@@ -125,7 +130,7 @@ public class SetUpDB {
                     try {
                         currentStatement.close();
                     } catch (SQLException e) {
-                        logger.log(Level.SEVERE, null, e);;
+                        logger.log(Level.SEVERE, null, e);
                     }
                 }
                 currentStatement = null;
