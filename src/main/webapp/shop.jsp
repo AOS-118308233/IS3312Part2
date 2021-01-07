@@ -4,8 +4,7 @@
     Author     : aoife
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -75,12 +74,11 @@
       <br>   
 
       <h2> OUR BEST-SELLING PRODUCTS!!! </h2>
-      <div class="row">
-          
+      
           <!-- Hard Coded Products 
           
-          <!-- Combo Box for Filtering - Doesn't function 
-     
+          <!-- Combo Box for Filtering - Doesn't function -->
+      
         <select name="filters" id="filters">
             <option value="newest"> Sort By: Newest to Oldest</option>
             <option value="oldest"> Sort By: Oldest to Newest</option>
@@ -89,69 +87,80 @@
             <option value="LowToHigh">Sort By Price: Lowest to Highest</option>
             <option value="HighToLow">Sort By Price: Highest to Lowest</option>
         </select>
-          
-        <!-- Williams 
-      <div class ="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card>
-            <img class="card-img-top" src="resources/images/williams.jpg" alt="Williams" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p>Williams F1 Bear</>
-              </h5>
-              <p class="card-text">George will make your kids happy, he's soft and snuggly, a very big hit with our customers. More than can be said for Williams over the last few years.</p>
-              <p class="price"><strong>€24.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Wil123">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-            </form>
+      
+        <br/>
+                
+        <div class="row">
+            <div class="col-lg-3">
+                <h2 class="my-4">Filters</h2>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Teddy Bears</a>
+                        <a href="#" class="list-group-item">Animals</a>
+                        <a href="#" class="list-group-item">Brands</a>
+                    </div>
             </div>
-          </div>
-        </div> 
-        <br>
-        
-        <!-- Yoda 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/yoda.jpg" alt="yoda" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p>Baby Yoda</p>
-              </h5>
-              <p class="card-text">The stand out star of Disney's "The Mandolorian". It's Yoda, but cuter. Can you really call him a baby if he's 50 years old? I guess some 50 year olds do act like babies?</p>
-              <p class="price"><strong>€39.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Yod456">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-            </form>
-            </div>
-          </div>
-        </div>    
-        <br>
         
         
-        <!-- Dino 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/dino.jpg" alt="dino" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p>Green Dinosaur</p>
-              </h5>
-              <p class="card-text">Geoff is a little dinosaur who is looking for his forever home. Just look at him? Look at how cute he is! Look him in the eyes and say you'll bring him home today!. </p>
-              <p class="price"><strong>€12.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Din098">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-            </form>
-              
-            </div>
-          </div>
-        </div> 
-        <br>
-        
-        <!-- Cow 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+            <!-- Williams -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100>
+                    <a href = "#"> <img class="card-img-top" src="resources/images/williams.jpg" alt="Williams" height="200" width="180"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p>Williams F1 Bear</p>
+                            </h5>
+                            <p class="card-text">George will make your kids happy, he's soft and snuggly, a very big hit with our customers. More than can be said for Williams over the last few years.</p>
+                            <p class="price"><strong>EUR24.95</strong></p>
+                                <form action="cart.jsp" method="post">
+                                    <input type="hidden" name="productCode" value="Wil123">
+                                    <input type="submit" value="Add To Cart" class="btnBuy">
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Yoda -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="resources/images/yoda.jpg" alt="yoda" height="200" width="180"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p>Baby Yoda</p>
+                            </h5>
+                            <p class="card-text">The stand out star of Disney's "The Mandolorian". It's Yoda, but cuter. Can you really call him a baby if he's 50 years old? I guess some 50 year olds do act like babies?</p>
+                            <p class="price"><strong>EUR39.95</strong></p>
+                                <form action="cart.jsp" method="post">
+                                    <input type="hidden" name="productCode" value="Yod456">
+                                    <input type="submit" value="Add To Cart" class="btnBuy">
+                                </form>
+                        </div>
+                    </div>
+                </div> 
+                
+                
+       </div> <!-- Row 1 with filters and products -->
+       
+       <div class="row">
+           <!-- Dino -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="resources/images/dino.jpg" alt="dino" height="200" width="180"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <p>Green Dinosaur</p>
+                            </h5>
+                            <p class="card-text">Geoff is a little dinosaur who is looking for his forever home. Just look at him? Look at how cute he is! Look him in the eyes and say you'll bring him home today!. </p>
+                            <p class="price"><strong>EUR12.95</strong></p>
+                                <form action="cart.jsp" method="post">
+                                    <input type="hidden" name="productCode" value="Din098">
+                                    <input type="submit" value="Add To Cart" class="btnBuy">
+                                </form>            
+                        </div>
+                    </div>
+                </div> 
+           
+             <!-- Cow -->
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="resources/images/cow.jpg" alt="cow" height="200" width="180"></a>
             <div class="card-body">
@@ -159,7 +168,7 @@
                 <p>Life Size Cow </p>
               </h5>
               <p class="card-text">This LIFE SIZE (yes really!) Highland Cow is a big one, better be careful and moooooove out of his way! <b>*Disclaimer: This cow is not actually life sized*</b></p>
-              <p class="price"><strong>€17.95</strong></p>
+              <p class="price"><strong>EUR17.95</strong></p>
               <form action="cart.jsp" method="post">
                 <input type="hidden" name="productCode" value="Moo678">
                 <input type="submit" value="Add To Cart" class="btnBuy">
@@ -167,87 +176,8 @@
             </div>
           </div>
         </div> 
-        <br>
-        
-        <!-- Scooby Doo 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/scooby.jpg" alt="Scooby Doo" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p>Scooby Doo</p>
-              </h5>
-              <p class="card-text"> "Scooby Dooby Do, where are you?" Could be in your house if you act quick and add him to your basket </p>
-              <p class="price"><strong>€19.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Sco833">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-            </form>
-            </div>
-          </div>
-        </div>    
-        <br>
-        
-        <!-- Penguin
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/penguin.jpg" alt="penguin" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p> Penguin </p>
-              </h5>
-              <p class="card-text"> Find me something cuter than this penguin. What's that? You can't because he is the cutest thing ever?! </p>
-              <p class="price"><strong>€10.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Pen654">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-              </form>
-            </div>
-          </div>
-        </div>
-        <br>
-        
-        <!-- Lobster 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/lobster.jpg" alt="lobster" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p> Pinchy </p>
-              </h5>
-              <p class="card-text"> This lobster comes with a warning. Please keep away from hot water. End of warning. </p>
-              <p class="price"><strong>€8.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="Lob321">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-             </form>
-            </div>
-          </div>
-        </div> 
-        <br>
-        
-        <!-- Care Bear 
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="resources/images/carebear.jpg" alt="care bear" height="200" width="180"></a>
-            <div class="card-body">
-              <h5 class="card-title">
-                <p> Care Bear </p>
-              </h5>
-              <p class="card-text"> Passing on your old tatty Care Bear to your kids is not caring. Buy them a new one cheapskate. </p>
-              <p class="price"><strong>€22.95</strong></p>
-              <form action="cart.jsp" method="post">
-                <input type="hidden" name="productCode" value="CaB345">
-                <input type="submit" value="Add To Cart" class="btnBuy">
-            </form>
-            </div>
-          </div>
-        </div>   
-      </div>
-    </div> -->
-    <br>
-    
-
+       </div>
+<!--
         <c:forEach items="${Product}" var="topProduct">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -264,7 +194,7 @@
               </div>
             </div>
           </div>
-        </c:forEach>      
+        </c:forEach>      -->
               
       </div>
     
@@ -293,7 +223,7 @@
         <br/>
         <!-- Second Line -->
         <a class="Cookies" style="float:left" href="links.html">Cookies</a>
-        <a class="currency" style="float:right" href="links.html">Currency| € | £ | $ |</a>
+        <a class="currency" style="float:right" href="links.html">Currency| ? | � | $ |</a>
         <br>
         <!-- Third Line --> 
         <a class="delivery" style="float:left" href="links.html">Delivery and Returns</a>

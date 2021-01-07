@@ -36,9 +36,9 @@ public class DBManager {
 
         Connection dbConnection = null;
         //String strUrl = "jdbc:derby:bills-product-db;create=true";
-        String strUrl = "jdbc:derby://localhost:1527/11830-Toys4Us;create=true";
+        String strUrl = "jdbc:derby://localhost:1527/AOS-118308233-Toys4Us;create=true";
         try {
-            dbConnection = DriverManager.getConnection(strUrl,"Aoife","toys");
+            dbConnection = DriverManager.getConnection(strUrl,"aoifesully","aoife11830");
         } catch (SQLException sqle) {
             logger.log(Level.SEVERE, null, sqle.getStackTrace());
         }
